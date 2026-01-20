@@ -1,0 +1,272 @@
+/* Animated Gradient Background */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.6;
+    background: linear-gradient(270deg, #2563eb, #7c3aed, #10b981, #f59e0b);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Hero Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 60px;
+    flex-wrap: wrap;
+}
+
+.header-text {
+    max-width: 600px;
+}
+
+.header-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    margin-bottom: 6px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.header-text h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.header-text p {
+    max-width: 650px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+.header-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.8);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation for photo */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.85);
+    color: #1f2937;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 8px 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #ffffff;
+    color: #2563eb;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+/* Glass sections */
+.glass {
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin: 30px auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Headings */
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
+
+/* Skills */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skills-tags span {
+    background: linear-gradient(135deg, #2563eb, #7c3aed, #f59e0b);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #fff;
+    cursor: default;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.skills-tags span:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+
+
+/* Bars */
+.skill-bar {
+    background-color: rgba(255,255,255,0.3);
+    height: 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar div {
+    height: 100%;
+    width: 0;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 22px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    transition: width 1.8s ease;
+}
+
+/* Big Gradient Bars */
+.skill-bar {
+    background-color: rgba(255,255,255,0.3);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-bar div {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    transition: width 1.8s ease;
+}
+
+/* Supporting Tools */
+.tools-section {
+    margin-top: 40px;
+}
+
+.tools-section p {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.tool-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tool {
+    font-size: 30px;
+    background: rgba(255,255,255,0.25);
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background 0.3s;
+    cursor: default;
+}
+
+.tool:hover {
+    transform: scale(1.2);
+    background: rgba(255,255,255,0.45);
+}
+
+/* Scroll-trigger animation for bars */
+.core-skills .skill-bar div {
+    opacity: 0;
+}
+
+.core-skills .skill-bar div.fill {
+    opacity: 1;
+    width: var(--fill-width);
+}
+
+/* Projects */
+.project {
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(255,255,255,0.85);
+    color: #1f2937;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.project:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.project h4 {
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* Responsive */
+@media(max-width: 850px){
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-photo {
+        margin-top: 25px;
+    }
+}

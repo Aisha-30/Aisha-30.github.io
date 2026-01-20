@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aishwarya Mohanty | Python Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="header">
+    <div class="header-text fade-in">
+        <h1>Aishwarya Mohanty</h1>
+        <h2>Python Developer</h2>
+        <p>Building reliable, data-driven applications using Python and Machine Learning</p>
+
+        <div class="links">
+            <a href="/AishwaryaMohanty-Resume.pdf" target="_blank" class="btn">Download Resume</a>
+            <a href="https://github.com/Aisha-30 " target="_blank" class="btn">GitHub</a>
+            <a href="https://linkedin.com/in/aishwarya-mohanty-372090247" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="header-photo fade-in">
+        <img src="/passport photo.jpeg" alt="Aishwarya Mohanty">
+    </div>
+</header>
+
+<!-- Professional Summary -->
+<section class="summary glass fade-in-section">
+    <h3>Professional Summary</h3>
+    <p>
+        Python Developer with hands-on experience in Machine Learning and Deep Learning.
+        Skilled in building, training, and evaluating data-driven models using real-world datasets.
+        Experienced in CNN-based architectures, performance optimization, and clean, maintainable Python code.
+        Actively seeking entry-level opportunities to contribute to impactful software and ML solutions.
+    </p>
+</section>
+
+<!-- Skills Section -->
+<!-- Skills Section -->
+<section class="skills-section glass fade-in-section">
+    <h3>Technical Skills</h3>
+    <div class="skills-tags">
+        <span>Python</span>
+        <span>Django</span>
+        <span>Flask</span>
+        <span>SQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <span>GitHub</span>
+      
+    </div>
+</section>
+
+
+
+
+
+<!-- Projects -->
+<section class="projects-section glass fade-in-section">
+    <h3>Projects</h3>
+
+    <div class="project">
+        <h4>Blood Group Detection Using Fingerprint Images</h4>
+        <ul>
+            <li> Prepared and preprocessed fingerprint datasets using OpenCV and data augmentation techniques. </li>
+            <li>Built hybrid deep learning models (ResNet50+LSTM, MobileNet+GRU, EfficientNetB0+GRU) for blood group classification.</li>
+            <li>Performed model training, confusion matrix evaluation. </li>
+            <li> Achieved up to <strong>72% accuracy</strong> on the test dataset.</li>
+        </ul>
+        <p><strong>Technologies:</strong> Python, TensorFlow, Keras, OpenCV, ResNet50, MobileNet, EfficientNetB0, LSTM, GRU Python, TensorFlow, OpenCV </p>
+    </div>
+
+
+
+<!-- Education -->
+<section class="education-section glass fade-in-section">
+    <h3>Education</h3>
+    <p>
+        <strong>Bachelor of Technology (B.Tech)</strong><br>
+        Computer Science Engineering<br>
+        Government College of Engineering Kalahandi | 2022 - 2025
+    </p>
+</section>
+
+<!-- Contact -->
+<section class="contact-section glass fade-in-section">
+    <h3>Contact</h3>
+    <p>Email: aishwaryamohanty28@gmail.com</p>
+    <p>Mobile: +91 9861691338</p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Aishwarya Mohanty</p>
+</footer>
+
+<script>
+// Animate skill bars on scroll
+const skills = document.querySelectorAll('.skill-bar div');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.width = entry.target.dataset.width;
+        }
+    });
+},{threshold:0.5});
+
+skills.forEach(skill => {
+    observer.observe(skill);
+});
+
+// Fade-in sections on scroll
+const faders = document.querySelectorAll('.fade-in-section');
+const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
